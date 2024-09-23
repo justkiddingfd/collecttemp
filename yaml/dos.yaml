@@ -24,7 +24,7 @@ requests:
 
          
     payloads:
-      header: helpers/payloads/request-headers.txt   
+      header: /home/duca/nuclei-templates/helpers/payloads/request-headers.txt 
    
     attack: clusterbomb
     redirects: true 
