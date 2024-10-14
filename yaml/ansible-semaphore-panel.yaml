@@ -1,7 +1,7 @@
 id: ansible-semaphore-panel
 
 info:
-  name: Ansible Semaphore Panel Detect
+  name: Ansible Semaphore Panel Detect ahiihi
   author: Yuzhe-zhang-0
   severity: info
   description: An Ansible Semaphore login panel was detected.
@@ -19,10 +19,10 @@ requests:
     path:
       - '{{BaseURL}}/auth/login'
 
+        words:
     matchers-condition: or
     matchers:
       - type: word
-        words:
           - '<title>Ansible Semaphore</title>'
 
       - type: regex
