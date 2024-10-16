@@ -15,13 +15,6 @@ requests:
     body: "{\"profile\":{\"layout\": \"./../routes/indfsfdsdex.js\"}}"
     matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 500
-      - type: word
-        words: 
-          - "X-Powered-By: Express"
-        part: header  
       - type: word
         words:
           - "ENOENT: no such file or directory"
