@@ -1,7 +1,7 @@
 id: git-config
 
 info:
-  name: Git Config Disclosure
+  name: Git Config Disclosure 1
   author: pdteam,pikpikcu,Mah3Sec_
   severity: medium
   description: Searches for the pattern /.git/config and log file on passed URLs.
