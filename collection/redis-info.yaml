@@ -1,0 +1,16 @@
+id: redis-info
+
+info:
+  name: Redis Unauth Info Disclosure
+  author: community
+  severity: high
+  tags: redis,unauth
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+    matchers:
+      - type: word
+        words:
+          - "redis_version"

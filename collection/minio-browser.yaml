@@ -1,0 +1,16 @@
+id: minio-browser
+
+info:
+  name: MinIO Browser Exposed
+  author: community
+  severity: medium
+  tags: minio,unauth
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/minio"
+    matchers:
+      - type: word
+        words:
+          - "MinIO Browser"

@@ -1,0 +1,16 @@
+id: dahua-webcam-unauth
+
+info:
+  name: Dahua Webcam Live Feed Unauthenticated
+  author: community
+  severity: high
+  tags: iot,webcam,dahua,unauth
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/cgi-bin/snapshot.cgi"
+    matchers:
+      - type: status
+        status:
+          - 200

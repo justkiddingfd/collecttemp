@@ -1,0 +1,15 @@
+id: mongodb-unauth
+
+info:
+  name: MongoDB Unauthenticated Access
+  author: community
+  severity: high
+  tags: mongodb,unauth
+
+network:
+  - host:
+      - "{{Host}}"
+    matchers:
+      - type: word
+        words:
+          - "buildInfo"

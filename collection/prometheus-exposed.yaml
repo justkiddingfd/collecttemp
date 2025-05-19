@@ -1,0 +1,17 @@
+id: prometheus-exposed
+
+info:
+  name: Prometheus Metrics Exposed
+  author: community
+  severity: medium
+  tags: prometheus,monitoring,unauth
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/metrics"
+    matchers:
+      - type: word
+        words:
+          - "# HELP"
+          - "process_cpu_seconds_total"

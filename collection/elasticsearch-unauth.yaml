@@ -1,0 +1,16 @@
+id: elasticsearch-unauth
+
+info:
+  name: Elasticsearch Unauthenticated Access
+  author: community
+  severity: high
+  tags: elasticsearch,unauth
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/"
+    matchers:
+      - type: word
+        words:
+          - "cluster_name"

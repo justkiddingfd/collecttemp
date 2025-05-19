@@ -1,0 +1,15 @@
+id: smb-anon
+
+info:
+  name: SMB Anonymous Access
+  author: community
+  severity: medium
+  tags: smb,unauth
+
+network:
+  - host:
+      - "{{Host}}"
+    matchers:
+      - type: word
+        words:
+          - "NT_STATUS_OK"

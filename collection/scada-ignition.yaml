@@ -1,0 +1,16 @@
+id: scada-inductive-ignition
+
+info:
+  name: Inductive Automation Ignition SCADA Web Interface
+  author: community
+  severity: medium
+  tags: scada,unauth
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/main/system/"
+    matchers:
+      - type: word
+        words:
+          - "Ignition Gateway"
