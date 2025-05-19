@@ -1,0 +1,17 @@
+id: swagger-ui
+
+info:
+  name: Swagger UI Exposed
+  author: projectdiscovery
+  severity: low
+  tags: swagger,exposure,unauth
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/swagger-ui.html"
+      - "{{BaseURL}}/swagger/"
+    matchers:
+      - type: word
+        words:
+          - "Swagger UI"

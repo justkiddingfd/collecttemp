@@ -1,0 +1,17 @@
+id: jenkins-unauth
+
+info:
+  name: Jenkins Unauthenticated Dashboard
+  author: projectdiscovery
+  severity: medium
+  tags: jenkins,unauth,exposure
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/login"
+    matchers:
+      - type: word
+        words:
+          - "Jenkins"
+        part: body

@@ -1,0 +1,16 @@
+id: tomcat-manager
+
+info:
+  name: Tomcat Manager Exposed
+  author: community
+  severity: high
+  tags: tomcat,exposure,unauth
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/manager/html"
+    matchers:
+      - type: word
+        words:
+          - "Tomcat Web Application Manager"

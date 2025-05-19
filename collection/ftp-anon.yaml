@@ -1,0 +1,18 @@
+id: ftp-anon
+
+info:
+  name: FTP Anonymous Login
+  author: community
+  severity: medium
+  tags: ftp,unauth
+
+network:
+  - inputs:
+      - data: ''
+    host:
+      - "{{Host}}"
+    matchers:
+      - type: word
+        words:
+          - "220"
+          - "Anonymous access granted"

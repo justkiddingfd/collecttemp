@@ -1,0 +1,16 @@
+id: kibana-unauth
+
+info:
+  name: Kibana Dashboard Unauthenticated Access
+  author: projectdiscovery
+  severity: medium
+  tags: kibana,unauth,exposure
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/app/kibana"
+    matchers:
+      - type: word
+        words:
+          - "kibana"

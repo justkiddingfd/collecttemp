@@ -1,0 +1,17 @@
+id: phpmyadmin-unauth
+
+info:
+  name: phpMyAdmin Unauthenticated Access
+  author: community
+  severity: high
+  tags: phpmyadmin,unauth,exposure
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/phpmyadmin/"
+      - "{{BaseURL}}/pma/"
+    matchers:
+      - type: word
+        words:
+          - "phpMyAdmin"

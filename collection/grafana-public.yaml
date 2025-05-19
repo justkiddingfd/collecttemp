@@ -1,0 +1,16 @@
+id: grafana-public
+
+info:
+  name: Grafana Public Dashboard
+  author: community
+  severity: medium
+  tags: grafana,unauth,exposure
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/d/"
+    matchers:
+      - type: word
+        words:
+          - "Grafana"

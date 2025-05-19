@@ -1,0 +1,17 @@
+id: ds-store
+
+info:
+  name: .DS_Store Disclosure
+  author: community
+  severity: low
+  tags: exposure,unauth,ds_store
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.DS_Store"
+    matchers:
+      - type: word
+        words:
+          - "buddy"
+          - "blob"

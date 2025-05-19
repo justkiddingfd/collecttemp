@@ -1,0 +1,17 @@
+id: env-file
+
+info:
+  name: Exposed .env file
+  author: projectdiscovery
+  severity: high
+  tags: env,exposure,unauth
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.env"
+    matchers:
+      - type: word
+        words:
+          - "DB_PASSWORD"
+          - "APP_ENV"

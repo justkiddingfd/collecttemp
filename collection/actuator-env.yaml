@@ -1,0 +1,16 @@
+id: actuator-env
+
+info:
+  name: Spring Boot Actuator Exposed Env
+  author: community
+  severity: high
+  tags: springboot,actuator,unauth,env
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/actuator/env"
+    matchers:
+      - type: word
+        words:
+          - "systemProperties"
